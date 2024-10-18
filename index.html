@@ -39,7 +39,9 @@
         Helping you become a better software engineer through coding challenges
         that build real applications.
       </p>
-      <button class="view-challenges-btn">View the Coding Challenges</button>
+      <a href="challenges.html" class="view-challenges-btn"
+        >View the Coding Challenges</a
+      >
     </div>
 
     <!-- Cards Section -->
@@ -104,6 +106,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Immediately apply the saved theme
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          document.querySelector(".navbar").classList.add("dark-mode");
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.add("dark-mode");
+          });
+        }
+      })();
+    </script>
     <script src="app.js"></script>
   </body>
 </html>

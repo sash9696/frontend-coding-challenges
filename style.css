@@ -21,6 +21,9 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
+.navbar-right{
+    cursor: pointer;
+}
 .navbar a {
   color: #333; /* Light mode link color */
   text-decoration: none;
@@ -83,20 +86,18 @@ body.dark-mode .banner p {
 
 /* Button styles */
 .view-challenges-btn {
-  background-color: #007bff; /* Bootstrap primary color */
-  color: white; /* Text color */
-  border: none;
-  padding: 10px 20px; /* Padding for the button */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Font size */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
+    display: inline-block; /* Make it behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 .view-challenges-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3; /* Darker shade on hover */
 }
-
 /* Dark mode button styles */
 body.dark-mode .view-challenges-btn {
   background-color: #0056b3; /* Darker blue for button in dark mode */
@@ -203,7 +204,7 @@ body.dark-mode .footer-links a:hover {
 /* Main Content Styles */
 .main-content {
     display: flex; /* Use flexbox for sidebar and content area */
-    height: calc(100vh - 60px); /* Full height minus navbar height */
+    height: calc(100vh - 120px); /* Full height minus navbar height */
 }
 
 /* Sidebar Styles */
@@ -248,7 +249,6 @@ body.dark-mode .sidebar a {
     flex: 1; /* Take remaining space */
     padding-left: 50px; /* Padding for the content area */
     padding-top: 20px; /* Padding for the content area */
-
     margin-left: 250px; /* Leave space for the fixed sidebar */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
@@ -257,4 +257,93 @@ body.dark-mode .sidebar a {
 body.dark-mode .content-area {
     background-color: #343a40; /* Dark mode background */
     color: #f8f9fa; /* Dark mode text color */
+}
+
+.content-area h1 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.content-area p {
+    margin-bottom: 45px; /* Spacing between paragraphs */
+    /* color: rgb(30, 29, 29); */
+}
+
+.subscription-content {
+    padding-left: 450px; /* Padding for the subscription area */
+}
+
+.subscription-card {
+    width: 80%;
+    background-color: #f8f9fa; /* Light mode background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding for the card */
+    margin: 20px 0; /* Margin above and below the card */
+    text-align: center; /* Center the text */
+}
+
+.card-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+.subscribe-input {
+    display: flex; /* Use flexbox for input and button */
+    justify-content: center; /* Center the input and button */
+    margin: 15px 0; /* Margin around the input area */
+}
+
+.subscribe-input input {
+    padding: 10px; /* Padding for the input field */
+    border: 1px solid #ced4da; /* Border for the input field */
+    border-radius: 5px; /* Rounded corners for the input field */
+    flex: 1; /* Input takes available space */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.subscribe-btn {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.subscribe-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.terms {
+    font-size: 0.85em; /* Smaller font for terms */
+    margin-top: 15px; /* Space above the terms text */
+}
+
+/* Dark Mode Styles */
+body.dark-mode .subscription-card {
+    background-color: #495057; /* Dark mode background */
+    color: #f8f9fa; /* Light text for dark mode */
+    border: 1px solid #ced4da; /* Border for dark mode */
+}
+
+body.dark-mode .subscribe-input input {
+    border: 1px solid #ced4da; /* Border for the input field in dark mode */
+    background-color: #343a40; /* Dark mode input background */
+    color: #fff; /* Light text for input field */
+}
+
+body.dark-mode .subscribe-btn {
+    background-color: #007bff; /* Button background color in dark mode */
+    color: #fff; /* Button text color */
+}
+
+body.dark-mode .subscribe-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover in dark mode */
+}
+
+body.dark-mode .terms {
+    color: #f8f9fa; /* Light text for terms in dark mode */
 }
