@@ -1,0 +1,6 @@
+[
+    { "name": "Challenges", "file": "challenges/challenges.md" },
+
+    { "name": "Challenge One", "file": "challenges/challenge1.md" },
+    { "name": "Challenge Two", "file": "challenges/challenge2.md" }
+]

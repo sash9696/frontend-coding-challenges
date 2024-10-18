@@ -24,3 +24,6 @@ const modeToggle = document.getElementById('modeToggle');
             localStorage.setItem('theme', 'light'); // Save light mode preference
         }
     });
+
+   
+    

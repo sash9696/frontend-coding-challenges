@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Challenges</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -20,8 +22,8 @@
       </div>
       <div class="navbar-center">
         <a href="challenges.html">The Coding Challenges</a>
-        <a href="#blog">Blog</a>
-        <a href="#courses">Courses</a>
+        <!-- <a href="#blog">Blog</a>
+        <a href="#courses">Courses</a> -->
       </div>
       <div class="navbar-right">
         <i
@@ -36,79 +38,42 @@
     <div class="main-content">
       <!-- Sidebar -->
       <aside class="sidebar">
-        <h2>Challenges</h2>
-        <ul>
-          <li><a href="challenges/challenge1.html">Challenge 1</a></li>
-          <li><a href="challenges/challenge2.html">Challenge 2</a></li>
-          <li><a href="challenges/challenge3.html">Challenge 3</a></li>
-          <li><a href="challenges/challenge4.html">Challenge 4</a></li>
-          <li><a href="challenges/challenge5.html">Challenge 5</a></li>
-          <!-- Add more challenges as needed -->
-        </ul>
+        <!-- <h2><a href="#challenges.html">Challenges</a> </h2> -->
+        <ul id="challenge-list"></ul>
       </aside>
       <!-- Main Content Area -->
-      <div class="content-area">
-        <h1>Frontend Challenges - Introduction</h1>
-        <p>Welcome to the Coding Challenges!</p>
-        <p>
-          Each week, I present a coding challenge designed to help front-end
-          developers enhance their skills through focused practice.
-        </p>
-        <p>
-          These challenges are exercises I've used to learn new front-end
-          technologies or frameworks, and each one requires you to create a
-          complete application or tool. Many of these challenges are inspired by
-          real-world applications and utilities.
-        </p>
-        <p>
-          The challenges are designed to be manageable, allowing you to complete
-          them in your spare time over a week or two, while still being
-          substantial enough to result in fully functional projects.
-        </p>
-        <p>
-          Each challenge includes an introduction that outlines the task, along
-          with a background section when needed to provide essential context.
-          You’ll find a detailed description of the challenge, followed by
-          instructions and scripts to help you test your solution.
-        </p>
-        <p>
-          I’d appreciate your feedback on these challenges and any suggestions
-          for improvement to better support your growth as a front-end
-          developer.
-        </p>
+      <div class="content-area" id="content-area"></div>
+    </div>
+
+    <!-- <div class="content-area">
         <p>
           If you're interested, you can subscribe to receive these challenges on
           SubStack <a href="https://substack.com" target="_blank">here</a>.
         </p>
-      </div>
-      
-    </div>
-          <!-- Subscription Card -->
+      </div> -->
+    <!-- Subscription Card -->
     <div class="subscription-content">
-        <div class="subscription-card">
-            <img
-              src="https://via.placeholder.com/300"
-              alt="Coding Image"
-              class="card-image"
-            />
-            <!-- Replace with your image URL -->
-            <h2>Subscribe for Updates</h2>
-            <p>Stay updated with the latest coding challenges and tips!</p>
-            <p class="subscriber-info">By Sahil Chopra · Over 68,000 subscribers</p>
-    
-            <div class="subscribe-input">
-              <input type="email" placeholder="Enter your email" required />
-              <button class="subscribe-btn">Subscribe</button>
-            </div>
-    
-            <p class="terms">
-              By subscribing you agree to Substack's <a href="#">Terms of Use</a>,
-              our <a href="#">Privacy Policy</a>, and our
-              <a href="#">Information collection notice</a>.
-            </p>
-          </div>
+      <div class="subscription-card">
+        <!-- <img
+                  src="https://via.placeholder.com/300"
+                  alt="Coding Image"
+                  class="card-image"
+                /> -->
+        <h2>Subscribe for Updates</h2>
+        <p>Stay updated with the latest coding challenges and tips!</p>
+        <!-- <p class="subscriber-info">By Sahil Chopra · Over 68,000 subscribers</p> -->
+
+        <!-- Embed Substack subscription form -->
+        <iframe
+          src="https://sahilchopra.substack.com/embed"
+          width="480"
+          height="320"
+          style="border: 1px solid #eee; background: white"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
     </div>
-   
 
     <footer class="footer">
       <div class="footer-content">
@@ -128,8 +93,34 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Immediately apply the saved theme
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const modeToggle = document.getElementById("modeToggle");
 
-    <script src="app.js"></script>
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          document.querySelector(".navbar").classList.add("dark-mode");
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.add("dark-mode");
+          });
+
+          // Change the icon to moon for dark mode
+          modeToggle.classList.remove("fa-sun"); // Change to dark mode icon
+          modeToggle.classList.add("fa-moon"); // Use moon icon for dark mode
+          modeToggle.setAttribute("title", "Switch to Light Mode"); // Update title
+        } else {
+          // Change the icon to sun for light mode
+          modeToggle.classList.remove("fa-moon"); // Change to light mode icon
+          modeToggle.classList.add("fa-sun"); // Use sun icon for light mode
+          modeToggle.setAttribute("title", "Switch to Dark Mode"); // Update title
+        }
+      })();
+    </script>
+
+    <script src="app.js" defer></script>
+    <script src="challenge.js" defer></script>
   </body>
   <
 </html>

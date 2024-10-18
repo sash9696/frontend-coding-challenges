@@ -245,7 +245,7 @@ body.dark-mode .sidebar a {
 }
 
 /* Content Area Styles */
-.content-area {
+.content-area{
     flex: 1; /* Take remaining space */
     padding-left: 50px; /* Padding for the content area */
     padding-top: 20px; /* Padding for the content area */
