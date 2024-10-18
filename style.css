@@ -204,7 +204,7 @@ body.dark-mode .footer-links a:hover {
 /* Main Content Styles */
 .main-content {
     display: flex; /* Use flexbox for sidebar and content area */
-    height: calc(100vh - 120px); /* Full height minus navbar height */
+    height: fit-content; /* Full height minus navbar height */
 }
 
 /* Sidebar Styles */
