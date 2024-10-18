@@ -1,0 +1,103 @@
+/* Base styles for both modes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Light mode background */
+    color: #333; /* Light mode text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navbar a {
+    color: #333; /* Light mode link color */
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s; /* Smooth transition for links */
+}
+
+.navbar a:hover {
+    color: #007bff; /* Light mode hover color */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #343a40; /* Dark mode background */
+    color: #f8f9fa; /* Dark mode text color */
+}
+
+.navbar.dark-mode {
+    background-color: #212529; /* Dark mode navbar background */
+    color: #f8f9fa; /* Dark mode navbar text color */
+}
+
+.navbar.dark-mode a {
+    color: #f8f9fa; /* Dark mode link color */
+}
+
+.navbar.dark-mode a:hover {
+    color: #007bff; /* Dark mode hover color */
+}
+
+/* Banner styles */
+.banner {
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding for desired spacing */
+    background-color: #f8f9fa; /* Light mode background color */
+    border-bottom: 2px solid #e7e7e7; /* Optional bottom border */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.banner h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.banner p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+    margin-bottom: 30px; /* Space below the paragraph */
+    color: #6c757d; /* Grey color for the text */
+}
+
+/* Dark mode banner styles */
+body.dark-mode .banner {
+    background-color: #495057; /* Dark mode background for banner */
+    color: #f8f9fa; /* Dark mode text color */
+}
+
+body.dark-mode .banner p {
+    color: #d1d1d1; /* Light grey color for the paragraph in dark mode */
+}
+
+/* Button styles */
+.view-challenges-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.view-challenges-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Dark mode button styles */
+body.dark-mode .view-challenges-btn {
+    background-color: #0056b3; /* Darker blue for button in dark mode */
+}
+
+body.dark-mode .view-challenges-btn:hover {
+    background-color: #003d80; /* Even darker shade on hover in dark mode */
+}
