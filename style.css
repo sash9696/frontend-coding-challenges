@@ -217,6 +217,9 @@ body.dark-mode .footer-links a {
 
 /* Sidebar Styles */
 /* Sidebar Styles */
+.toggle-sidebar{
+    visibility: hidden;
+}
 .sidebar {
   position: fixed; /* Keep the sidebar fixed */
   width: 250px; /* Fixed width */
@@ -260,6 +263,8 @@ body.dark-mode .sidebar {
 body.dark-mode .sidebar a {
   color: #0d6efd;
 }
+
+
 
 /* Content Area Styles */
 .content-area {
@@ -406,5 +411,8 @@ body.dark-mode .terms {
     }
     .subscription-content{
       padding-left: 50px;
+    }
+    .toggle-sidebar{
+        visibility: visible;
     }
   }
