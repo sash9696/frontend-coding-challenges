@@ -15,40 +15,38 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="navbar-left">
-        <a href="index.html" class="navbar-logo"
-          ><i class="fas fa-laptop-code"></i> Frontend Challenges</a
-        >
-    
+        <div class="navbar-left">
+          <a href="index.html" class="navbar-logo"
+            ><i class="fas fa-laptop-code"></i> Frontend Challenges</a
+          >
+        </div>
+        <div class="navbar-center">
+          <a href="challenges.html">The Coding Challenges</a>
+        </div>
+        <div class="navbar-right">
+          <i
+            class="fas fa-sun mode-icon"
+            title="Switch to Dark Mode"
+            id="modeToggle"
+          ></i>
+        </div>
+      </nav>
+      
+      <!-- Main Section -->
+      <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <i
+            class="fas fa-bars toggle-sidebar"
+            title="Toggle Sidebar"
+            id="sidebarToggle"
+          ></i>
+          <ul id="challenge-list"></ul>
+        </aside>
+        <!-- Main Content Area -->
+        <div class="content-area" id="content-area"></div>
       </div>
-      <div class="navbar-center">
-        <a href="challenges.html">The Coding Challenges</a>
-      </div>
-      <div class="navbar-right">
-        <i
-          class="fas fa-sun mode-icon"
-          title="Switch to Dark Mode"
-          id="modeToggle"
-        ></i> &nbsp;
-        <i
-        class="fas fa-bars toggle-sidebar"
-        title="Toggle Sidebar"
-        id="sidebarToggle"
-      ></i>
-      </div>
-    </nav>
-
-    <!-- Main Section -->
-    <div class="main-content">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <!-- <h2><a href="#challenges.html">Challenges</a> </h2> -->
-        <ul id="challenge-list"></ul>
-      </aside>
-      <!-- Main Content Area -->
-      <div class="content-area" id="content-area"></div>
-    </div>
-
+      
     <!-- <div class="content-area">
         <p>
           If you're interested, you can subscribe to receive these challenges on

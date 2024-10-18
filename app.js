@@ -26,7 +26,8 @@ modeToggle.addEventListener("click", () => {
 });
 
 document.getElementById("sidebarToggle").addEventListener("click", function () {
-  const sidebar = document.querySelector(".sidebar");
-  sidebar.classList.toggle("hidden"); // Toggle the 'hidden' class
-  sidebar.style.display='block';
-});
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("hidden"); // Toggle the 'hidden' class
+  });
+  
+  

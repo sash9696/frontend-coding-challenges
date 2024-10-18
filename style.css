@@ -227,29 +227,39 @@ body.dark-mode .footer-links a {
 .main-content {
   display: flex;
   height: fit-content;
-  padding: 0 20px;
 }
 
 /* Sidebar Styles */
-.toggle-sidebar{
-    visibility: hidden;
-}
 .sidebar {
-  position: fixed; /* Keep the sidebar fixed */
-  width: 250px; /* Fixed width */
-  height: 100%; /* Full height */
-  background-color: var(--light-bg);
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Allow scrolling */
-  transition: transform 0.3s ease; /* Smooth transition for sliding */
-  transform: translateX(0); /* Show by default */
-}
-
-/* Hide sidebar off-screen */
-.sidebar.hidden {
-  transform: translateX(-100%); /* Move off-screen */
-}
+    position: fixed; /* Keep the sidebar fixed */
+    width: 250px; /* Fixed width */
+    height: 100%; /* Full height */
+    background-color: var(--light-bg);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allow scrolling */
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+    transform: translateX(0); /* Show by default */
+    padding: 0 10px;
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-86%); /* Move off-screen */
+  }
+  
+  /* Style for the toggle icon */
+  .sidebar .toggle-sidebar {
+    position: absolute; /* Position it absolutely */
+    top: 20px; /* Adjust as needed */
+    right: 10px; 
+    cursor: pointer; /* Indicate it's clickable */
+    transition: right 0.3s ease; /* Smooth transition for showing/hiding */
+  }
+  
+  /* When sidebar is hidden, move the icon to the right */
+  .sidebar.hidden .toggle-sidebar {
+    right: 10px; /* Bring it back into view */
+  }
+  
 
 
 
@@ -399,6 +409,7 @@ body.dark-mode .terms {
     .sidebar {
       position: absolute; /* Change position for smaller screens */
       height: auto; /* Height adapts to content */
+      width: 150px;
     }
     .subscription-content {
       padding-left: 100px;
@@ -410,9 +421,8 @@ body.dark-mode .terms {
     .toggle-sidebar{
         visibility: visible;
     }
-    .sidebar {
-        display: none;
-      }
+  
+    
   }
 
 @media (max-width: 576px) {
@@ -435,7 +445,5 @@ body.dark-mode .terms {
     .toggle-sidebar{
         visibility: visible;
     }
-    .sidebar {
-        display: none;
-      }
+  
   }
