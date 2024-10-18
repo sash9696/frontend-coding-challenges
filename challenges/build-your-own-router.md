@@ -41,7 +41,11 @@ const routes = {
 
 function router() {
     const hash = window.location.hash.substring(1) || 'home';
-    document.getElementById('view').innerHTML = routes[hash] || '<h1>404 Not Found</h1>';
+    document.getElementById('view').
+    
+    innerHTML = routes[hash] || 
+    
+    '<h1>404 Not Found</h1>';
 }
 
 window.addEventListener('hashchange', router);

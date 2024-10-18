@@ -1,349 +1,410 @@
-/* Base styles for both modes */
+/* CSS Variables */
+:root {
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+  --light-text: #333;
+  --dark-text: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+}
+
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
-/* Navbar styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Navbar Styles */
 .navbar {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8f9fa; /* Light mode background */
-  color: #333; /* Light mode text color */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  position: sticky; /* Make the navbar sticky */
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensure it stays above other content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-right{
-    cursor: pointer;
+.navbar-right {
+  cursor: pointer;
 }
+
 .navbar a {
-  color: #333; /* Light mode link color */
+  color: var(--light-text);
   text-decoration: none;
   margin: 0 15px;
-  transition: color 0.3s; /* Smooth transition for links */
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: #007bff; /* Light mode hover color */
+  color: var(--link-color);
 }
 
-/* Dark mode styles */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #343a40; /* Dark mode background */
-  color: #f8f9fa; /* Dark mode text color */
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 .navbar.dark-mode {
-  background-color: #212529; /* Dark mode navbar background */
-  color: #f8f9fa; /* Dark mode navbar text color */
+  background-color: #212529;
+  color: var(--dark-text);
 }
 
 .navbar.dark-mode a {
-  color: #f8f9fa; /* Dark mode link color */
+  color: var(--dark-text);
 }
 
 .navbar.dark-mode a:hover {
-  color: #007bff; /* Dark mode hover color */
+  color: var(--link-color);
 }
 
-/* Banner styles */
+/* Banner Styles */
 .banner {
   text-align: center;
-  padding: 50px 20px; /* Adjust padding for desired spacing */
-  background-color: #f8f9fa; /* Light mode background color */
-  border-bottom: 2px solid #e7e7e7; /* Optional bottom border */
-  transition: background-color 0.3s; /* Smooth transition */
+  padding: 50px 20px;
+  background-color: var(--light-bg);
+  border-bottom: 2px solid #e7e7e7;
+  transition: background-color 0.3s;
 }
 
 .banner h1 {
-  font-size: 2.5rem; /* Adjust heading size */
-  margin-bottom: 20px; /* Space below the heading */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .banner p {
-  font-size: 1.2rem; /* Adjust paragraph size */
-  margin-bottom: 30px; /* Space below the paragraph */
-  color: #6c757d; /* Grey color for the text */
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #6c757d;
 }
 
-/* Dark mode banner styles */
+/* Dark Mode Banner */
 body.dark-mode .banner {
-  background-color: #495057; /* Dark mode background for banner */
-  color: #f8f9fa; /* Dark mode text color */
+  background-color: #495057;
+  color: var(--dark-text);
 }
 
 body.dark-mode .banner p {
-  color: #d1d1d1; /* Light grey color for the paragraph in dark mode */
+  color: #d1d1d1;
 }
 
-/* Button styles */
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
 .view-challenges-btn {
-    display: inline-block; /* Make it behave like a button */
-    padding: 10px 20px; /* Padding for the button */
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
+  @apply .btn; /* If using SASS/SCSS */
+  background-color: var(--link-color);
+  color: #fff;
 }
 
 .view-challenges-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+  background-color: var(--link-hover);
 }
-/* Dark mode button styles */
+
+/* Dark Mode Button */
 body.dark-mode .view-challenges-btn {
-  background-color: #0056b3; /* Darker blue for button in dark mode */
+  background-color: #0056b3;
 }
 
 body.dark-mode .view-challenges-btn:hover {
-  background-color: #003d80; /* Even darker shade on hover in dark mode */
+  background-color: #003d80;
 }
 
 /* Cards Container */
 .cards-container {
   display: flex;
-  justify-content: space-around; /* Space between cards */
-  padding: 40px 20px; /* Padding for the container */
-  flex-wrap: wrap; /* Wrap cards on smaller screens */
+  justify-content: space-around;
+  padding: 40px 20px;
+  flex-wrap: wrap;
 }
 
 /* Card Styles */
 .card {
-  background-color: #ffffff; /* White background for cards */
-  border: 1px solid #e7e7e7; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  width: 300px; /* Fixed width for cards */
-  margin: 15px; /* Space around cards */
-  text-align: center; /* Center align text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-  transition: transform 0.3s; /* Smooth scaling on hover */
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  flex: 1 1 300px; /* Responsive card width */
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Scale card slightly on hover */
+  transform: scale(1.05);
 }
 
-/* Card Image Styles */
 .card-image {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
-  border-top-left-radius: 8px; /* Round top corners */
-  border-top-right-radius: 8px; /* Round top corners */
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-/* Card Title Styles */
-.card-title {
-  font-size: 1.5rem; /* Title size */
-  margin: 15px 0; /* Margin above and below title */
-}
-
-/* Card Description Styles */
-.card-description {
-  font-size: 1rem; /* Description size */
-  color: #6c757d; /* Grey color */
-  padding: 0 10px; /* Padding for description */
-}
-
-/* Dark mode card styles */
+/* Dark Mode Card Styles */
 body.dark-mode .card {
-  background-color: #495057; /* Dark mode background for cards */
-  border: 1px solid #6c757d; /* Dark mode border */
-  color: #f8f9fa; /* Dark mode text color */
+  background-color: #495057;
+  border: 1px solid #6c757d;
+  color: var(--dark-text);
 }
 
 body.dark-mode .card-description {
-  color: #d1d1d1; /* Light grey color for the description in dark mode */
+  color: #d1d1d1;
 }
 
 /* Footer Styles */
 .footer {
-  background-color: #f8f9fa; /* Light mode background color */
-  color: #333; /* Light mode text color */
-  text-align: center; /* Center text */
-  padding: 20px 0; /* Padding for top and bottom */
-  position: relative; /* Position relative for absolute elements if needed */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  text-align: center;
+  padding: 20px 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .footer-links {
-  margin-top: 10px; /* Space above links */
+  margin-top: 10px;
 }
 
 .footer-links a {
-  color: #007bff; /* Light mode link color */
-  text-decoration: none; /* Remove underline */
-  margin: 0 15px; /* Space between links */
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 15px;
 }
 
 .footer-links a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
-/* Dark mode footer styles */
+/* Dark Mode Footer */
 body.dark-mode .footer {
-  background-color: #212529; /* Dark mode background color */
-  color: #f8f9fa; /* Dark mode text color */
+  background-color: #212529;
+  color: var(--dark-text);
 }
 
 body.dark-mode .footer-links a {
-  color: #0d6efd; /* Dark mode link color */
-}
-
-body.dark-mode .footer-links a:hover {
-  text-decoration: underline; /* Underline on hover in dark mode */
+  color: #0d6efd;
 }
 
 /* Main Content Styles */
 .main-content {
-    display: flex; /* Use flexbox for sidebar and content area */
-    height: fit-content; /* Full height minus navbar height */
+  display: flex;
+  height: fit-content;
+  padding: 0 20px;
 }
 
 /* Sidebar Styles */
+/* Sidebar Styles */
 .sidebar {
-    position: fixed; /* Make sidebar fixed */
-    width: 250px; /* Fixed width for the sidebar */
-    height: 100%; /* Full height */
-    background-color: #f8f9fa; /* Light mode background for sidebar */
-    padding: 20px; /* Padding for the sidebar */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for sidebar */
-    transition: background-color 0.3s; /* Smooth transition */
-    overflow-y: auto; /* Allow scrolling for sidebar content */
+  position: fixed; /* Keep the sidebar fixed */
+  width: 250px; /* Fixed width */
+  height: 100%; /* Full height */
+  background-color: var(--light-bg);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling */
+  transition: transform 0.3s ease; /* Smooth transition for sliding */
+  transform: translateX(0); /* Show by default */
 }
 
-/* Dark mode sidebar styles */
+/* Hide sidebar off-screen */
+.sidebar.hidden {
+  transform: translateX(-100%); /* Move off-screen */
+}
+
+
+
+/* Dark Mode Sidebar */
 body.dark-mode .sidebar {
-    background-color: #495057; /* Dark mode background for sidebar */
+  background-color: #495057;
 }
 
 /* Sidebar Links */
 .sidebar ul {
-    list-style-type: none; /* Remove bullets from the list */
-    padding: 0; /* Remove default padding */
+  list-style-type: none;
+  padding: 0;
 }
 
 .sidebar li {
-    margin: 10px 0; /* Space between list items */
+  margin: 10px 0;
 }
 
 .sidebar a {
-    text-decoration: none; /* Remove underline */
-    color: #007bff; /* Link color */
+  text-decoration: none;
+  color: var(--link-color);
 }
 
-/* Dark mode sidebar links */
+/* Dark Mode Sidebar Links */
 body.dark-mode .sidebar a {
-    color: #0d6efd; /* Dark mode link color */
+  color: #0d6efd;
 }
 
 /* Content Area Styles */
-.content-area{
-    flex: 1; /* Take remaining space */
-    padding-left: 80px; /* Padding for the content area */
-    padding-top: 20px; /* Padding for the content area */
-    margin-left: 250px; /* Leave space for the fixed sidebar */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+.content-area {
+  flex: 1;
+  padding-left: 80px;
+  padding-top: 20px;
+  margin-left: 250px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode content area styles */
+/* Dark Mode Content Area */
 body.dark-mode .content-area {
-    background-color: #343a40; /* Dark mode background */
-    color: #f8f9fa; /* Dark mode text color */
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
-.content-area h1 {
-    font-size: 24px; /* Heading size */
-    margin-bottom: 20px; /* Spacing below the heading */
-}
 
-.content-area p {
-    margin-bottom: 45px; /* Spacing between paragraphs */
-    /* color: rgb(30, 29, 29); */
-}
+
+
 
 .subscription-content {
-    padding-left: 450px; /* Padding for the subscription area */
+  padding-left: 450px;
 }
 
 .subscription-card {
-    width: 80%;
-    background-color: #f8f9fa; /* Light mode background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    padding: 20px; /* Padding for the card */
-    margin: 20px 0; /* Margin above and below the card */
-    text-align: center; /* Center the text */
+  width: 80%;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .card-image {
-    width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners for the image */
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .subscribe-input {
-    display: flex; /* Use flexbox for input and button */
-    justify-content: center; /* Center the input and button */
-    margin: 15px 0; /* Margin around the input area */
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
 }
 
 .subscribe-input input {
-    padding: 10px; /* Padding for the input field */
-    border: 1px solid #ced4da; /* Border for the input field */
-    border-radius: 5px; /* Rounded corners for the input field */
-    flex: 1; /* Input takes available space */
-    margin-right: 10px; /* Space between input and button */
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
 }
 
 .subscribe-btn {
-    padding: 10px 20px; /* Padding for the button */
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
+  padding: 10px 20px;
+  background-color: var(--link-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .subscribe-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+  background-color: var(--link-hover);
 }
 
-.terms {
-    font-size: 0.85em; /* Smaller font for terms */
-    margin-top: 15px; /* Space above the terms text */
-}
-
-/* Dark Mode Styles */
+/* Dark Mode Subscription Styles */
 body.dark-mode .subscription-card {
-    background-color: #495057; /* Dark mode background */
-    color: #f8f9fa; /* Light text for dark mode */
-    border: 1px solid #ced4da; /* Border for dark mode */
+  background-color: #495057;
+  color: var(--dark-text);
 }
 
 body.dark-mode .subscribe-input input {
-    border: 1px solid #ced4da; /* Border for the input field in dark mode */
-    background-color: #343a40; /* Dark mode input background */
-    color: #fff; /* Light text for input field */
+  border: 1px solid #ced4da;
+  background-color: #343a40;
+  color: #fff;
 }
 
 body.dark-mode .subscribe-btn {
-    background-color: #007bff; /* Button background color in dark mode */
-    color: #fff; /* Button text color */
+  background-color: var(--link-color);
 }
 
 body.dark-mode .subscribe-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover in dark mode */
+  background-color: var(--link-hover);
 }
 
 body.dark-mode .terms {
-    color: #f8f9fa; /* Light text for terms in dark mode */
+  color: var(--dark-text);
 }
+
+
+
+.responsive-iframe {
+    width: 100%; /* Full width */
+    height: 50vh; /* Height as 50% of the viewport height */
+    border: 1px solid #eee;
+    background: white;
+    box-sizing: border-box; /* Include border in width/height calculations */
+  }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+      }
+    
+      .content-area {
+        margin-left: 0;
+        padding-left: 20px;
+      }
+    
+      .cards-container {
+        flex-direction: column; /* Stack cards */
+        align-items: center; /* Center cards */
+      }
+    .sidebar {
+      position: absolute; /* Change position for smaller screens */
+      height: auto; /* Height adapts to content */
+    }
+    .subscription-content {
+      padding-left: 100px;
+    }
+  
+    .content-area {
+      margin-left: 0; /* No margin when sidebar is hidden */
+    }
+  }
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px; /* Adjust font size */
+        padding: 0 10px; /* Padding on sides */
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+    .navbar a {
+      margin: 5px 0; /* Stack navbar items vertically */
+    }
+  
+    .content-area {
+      margin-left: 0;
+      padding-left: 10px;
+    }
+    .subscription-content{
+      padding-left: 50px;
+    }
+  }
