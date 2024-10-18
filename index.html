@@ -1,44 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Challenges</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <!-- Left: Logo and Title -->
-        <div class="navbar-left">
-            <img src="icon.png" alt="Logo" class="navbar-icon">
-            <span class="navbar-title">Frontend Challenges</span>
-        </div>
-
-        <!-- Middle: Navigation Links -->
-        <div class="navbar-middle">
-            <a href="#" class="nav-link">The Coding Challenges</a>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="#" class="nav-link">Courses</a>
-        </div>
-
-        <!-- Right: Dark/Light Mode Switch -->
-        <div class="navbar-right">
-            <i class="fas fa-sun mode-icon" title="Switch to Dark Mode" id="modeToggle"></i> <!-- Light Mode Icon -->
-            
-        </div>
-        
+      <div class="navbar-left">
+        <a href="index.html" class="navbar-logo"
+          ><i class="fas fa-laptop-code"></i> Frontend Challenges</a
+        >
+      </div>
+      <div class="navbar-center">
+        <a href="challenges.html">The Coding Challenges</a>
+        <a href="#blog">Blog</a>
+        <a href="#courses">Courses</a>
+      </div>
+      <div class="navbar-right">
+        <i
+          class="fas fa-sun mode-icon"
+          title="Switch to Dark Mode"
+          id="modeToggle"
+        ></i>
+        <!-- Light Mode Icon -->
+      </div>
     </nav>
+    <!-- Banner Section -->
+    <div class="banner">
+      <h1>Frontend Coding Challenges</h1>
+      <p>
+        Helping you become a better software engineer through coding challenges
+        that build real applications.
+      </p>
+      <button class="view-challenges-btn">View the Coding Challenges</button>
+    </div>
 
-        <!-- Banner Section -->
-        <div class="banner">
-            <h1>Frontend Coding Challenges</h1>
-            <p>Helping you become a better software engineer through coding challenges that build real applications.</p>
-            <button class="view-challenges-btn">View the Coding Challenges</button>
+    <!-- Cards Section -->
+    <div class="cards-container">
+      <div class="card">
+        <img
+          src="https://user-images.githubusercontent.com/74038190/212746035-d5c61762-973c-44c0-aec7-887f3b7690e3.gif"
+          alt="Coding at Laptop 1"
+          class="card-image"
+        />
+        <h3 class="card-title">Simple to Begin</h3>
+        <p class="card-description">
+          The coding challenges are designed to guide you through the
+          application development process and can be completed in a short
+          timeframe.
+        </p>
+      </div>
+      <div class="card">
+        <img
+          src="https://media3.giphy.com/media/CXnj3jCwvETngjy11B/200.webp?cid=ecf05e47vvf7u1l6arfq04m331dee4jh0zc3v4ar7wnt8orf&ep=v1_gifs_search&rid=200.webp&ct=g"
+          alt="Coding at Laptop 2"
+          class="card-image"
+        />
+        <h3 class="card-title">
+          Concentrate on Developing Real-World Solutions
+        </h3>
+        <p class="card-description">
+          Each challenge emphasizes creating practical software solutions
+          instead of simplistic applications or abstract algorithms and data
+          structures.
+        </p>
+      </div>
+      <div class="card">
+        <img
+          src="data:image/png;base64,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"
+          alt="Coding at Laptop 3"
+          class="card-image"
+        />
+        <h3 class="card-title">Framework Independent</h3>
+        <p class="card-description">
+          You can tackle the challenges using the front-end framework or
+          language of your choice, and even explore multiple options if you
+          prefer.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Frontend Challenges. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a
+            href="https://www.linkedin.com/in/sahil-chopra-56a63b191/"
+            target="_blank"
+            class="linkedin-icon"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </div>
+      </div>
+    </footer>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
