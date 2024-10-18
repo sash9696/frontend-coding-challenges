@@ -247,7 +247,7 @@ body.dark-mode .sidebar a {
 /* Content Area Styles */
 .content-area{
     flex: 1; /* Take remaining space */
-    padding-left: 50px; /* Padding for the content area */
+    padding-left: 80px; /* Padding for the content area */
     padding-top: 20px; /* Padding for the content area */
     margin-left: 250px; /* Leave space for the fixed sidebar */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
