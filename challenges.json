@@ -1,4 +1,7 @@
 [
     { "name": "Challenges", "file": "challenges/challenges.md" },
-    { "name": "Build your own Router", "file": "challenges/build-your-own-router.md" }
+    { "name": "Build your own Router", "file": "challenges/build-your-own-router.md" },
+    { "name": "Build Your Own Custom State Management System", "file": "challenges/build-your-own-custom-state-management.md" }
 ]
+
+
