@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Challenges</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Add Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Add Marked.js -->
 
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y9LMT2TWMX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Y9LMT2TWMX");
+    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -109,31 +124,31 @@
       </div>
     </footer>
     <script>
-        // Immediately apply the saved theme
-        (function () {
-            const savedTheme = localStorage.getItem("theme");
-            const modeToggle = document.getElementById("modeToggle");
-    
-            if (savedTheme === "dark") {
-                document.body.classList.add("dark-mode");
-                document.querySelector(".navbar").classList.add("dark-mode");
-                document.querySelectorAll(".nav-link").forEach((link) => {
-                    link.classList.add("dark-mode");
-                });
-    
-                // Change the icon to moon for dark mode
-                modeToggle.classList.remove("fa-sun"); // Change to dark mode icon
-                modeToggle.classList.add("fa-moon"); // Use moon icon for dark mode
-                modeToggle.setAttribute("title", "Switch to Light Mode"); // Update title
-            } else {
-                // Change the icon to sun for light mode
-                modeToggle.classList.remove("fa-moon"); // Change to light mode icon
-                modeToggle.classList.add("fa-sun"); // Use sun icon for light mode
-                modeToggle.setAttribute("title", "Switch to Dark Mode"); // Update title
-            }
-        })();
+      // Immediately apply the saved theme
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const modeToggle = document.getElementById("modeToggle");
+
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          document.querySelector(".navbar").classList.add("dark-mode");
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.classList.add("dark-mode");
+          });
+
+          // Change the icon to moon for dark mode
+          modeToggle.classList.remove("fa-sun"); // Change to dark mode icon
+          modeToggle.classList.add("fa-moon"); // Use moon icon for dark mode
+          modeToggle.setAttribute("title", "Switch to Light Mode"); // Update title
+        } else {
+          // Change the icon to sun for light mode
+          modeToggle.classList.remove("fa-moon"); // Change to light mode icon
+          modeToggle.classList.add("fa-sun"); // Use sun icon for light mode
+          modeToggle.setAttribute("title", "Switch to Dark Mode"); // Update title
+        }
+      })();
     </script>
-    
+
     <script src="app.js" defer></script>
   </body>
 </html>
