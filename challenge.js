@@ -46,7 +46,6 @@ async function fetchChallengeList() {
 
 // Load Markdown content based on the challenge file
 async function loadChallenge(file) {
-    console.log('loadChallenge',{file})
     try {
         const response = await fetch(file);
         if (!response.ok) {
@@ -71,7 +70,6 @@ function loadChallengeFromHash(hash) {
     }
 }
 
-console.log('window.location.hash',{hash:window.location.hash})
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -83,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('hashchange', () => {
         const currentChallenge = window.location.hash.slice(1);
-        console.log('currentChallenge',{currentChallenge})
         loadChallengeFromHash(currentChallenge);
     });
 });
