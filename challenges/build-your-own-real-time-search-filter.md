@@ -133,7 +133,7 @@ Set up ESLint to improve code quality:
 1. Install ESLint:
     
     ```bash
-=
+
     npm install eslint --save-dev
     
     ```
@@ -142,7 +142,7 @@ Set up ESLint to improve code quality:
 3. Run ESLint on your project to identify and fix issues:
     
     ```bash
-=
+
     npx eslint . --fix
     
     ```
@@ -155,7 +155,7 @@ Ensure the functionality of your search filter with unit tests.
 1. Set up a testing framework like Jest or Mocha.
     
     ```bash
-=
+
     npm install --save-dev jest
     
     ```
@@ -164,7 +164,6 @@ Ensure the functionality of your search filter with unit tests.
 3. Run the tests:
     
     ```bash
-=
     npm test
     
     ```
