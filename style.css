@@ -232,18 +232,18 @@ body.dark-mode .footer-links a {
 /* Sidebar Styles */
 .sidebar {
     position: fixed; /* Keep the sidebar fixed */
-    width: 250px; /* Fixed width */
+    width: 280px; /* Fixed width */
     height: 100%; /* Full height */
     background-color: var(--light-bg);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto; /* Allow scrolling */
     transition: transform 0.3s ease; /* Smooth transition for sliding */
     transform: translateX(0); /* Show by default */
-    padding: 0 10px;
+    padding: 0 20px;
   }
   
   .sidebar.hidden {
-    transform: translateX(-86%); /* Move off-screen */
+    transform: translateX(-92%); /* Move off-screen */
   }
   
   /* Style for the toggle icon */
@@ -257,7 +257,7 @@ body.dark-mode .footer-links a {
   
   /* When sidebar is hidden, move the icon to the right */
   .sidebar.hidden .toggle-sidebar {
-    right: 10px; /* Bring it back into view */
+    right: 7px; /* Bring it back into view */
   }
   
 
@@ -430,13 +430,19 @@ body.dark-mode .terms {
         font-size: 12px; /* Adjust font size */
         padding: 0 10px; /* Padding on sides */
         overflow-x: hidden; /* Prevent horizontal overflow */
+        
+    }
+    .navbar  {
+      width: 100% !important;
     }
     .navbar a {
       margin: 5px 0; /* Stack navbar items vertically */
     }
+
+   
   
     .content-area {
-      margin-left: 0;
+      margin-left: 20px;
       padding-left: 10px;
     }
     .subscription-content{
