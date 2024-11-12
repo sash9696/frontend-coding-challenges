@@ -4,7 +4,10 @@
     { "name": "Build Your Own Custom State Management System", "file": "challenges/build-your-own-custom-state-management.md" },
     { "name": "Build Your Own Progressive Web App (PWA)", "file": "challenges/build-your-own-pwa.md" },
     { "name": "Build Your Own Real Time Search Filter", "file": "challenges/build-your-own-real-time-search-filter.md" },
-    { "name": "Build Your Own Undo/Redo Functionality ", "file": "challenges/build-your-own-undo-redo-functionality.md" }
+    { "name": "Build Your Own Undo/Redo Functionality ", "file": "challenges/build-your-own-undo-redo-functionality.md" },
+    { "name": "Build Your Own UI Library ", "file": "challenges/build-your-own-ui-library.md" }
+
+    
 
 
 ]
